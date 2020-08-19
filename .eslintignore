@@ -1,0 +1,24 @@
+# dependencies
+node_modules
+
+# mock data
+data
+
+# production
+/build
+
+# dll files
+/public/static
+/public/index.html
+
+# resource files
+/resource
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.idea
+deploy/nginx.conf
+.history
+.cache
+.vscode

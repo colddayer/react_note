@@ -3,8 +3,5 @@ export namespace Redux {
     type: string
   }
 
-  type Reducer<State = any, Action extends IAction> = (
-    state: State | undefined,
-    action: Action
-  ) => State
+  type Reducer<State = any, Action> = (state: State | undefined, action: Action) => State
 }

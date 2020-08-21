@@ -1,7 +1,7 @@
 import { Redux } from './type'
 import ActionTypes from './actionTypes'
 
-export default function createStore<State, Action extends Redux.IAction>(
+export default function createStore<State, Action extends Redux.IAction = Redux.IAction>(
   reducer: Redux.Reducer<State | undefined>,
   initState?: State
 ) {
@@ -9,7 +9,7 @@ export default function createStore<State, Action extends Redux.IAction>(
   let currentState = initState
   const currentListeners: Array<Function> = []
 
-  const getState = () => currentState!
+  const getState = (): State => currentState!
 
   const subscribe = (listener: Function) => {
     let isSubscribe = true
@@ -28,6 +28,7 @@ export default function createStore<State, Action extends Redux.IAction>(
     for (const i of currentListeners) {
       i()
     }
+    return action
   }
 
   dispatch({ type: ActionTypes.INIT } as Action)

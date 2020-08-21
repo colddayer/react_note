@@ -6,6 +6,16 @@ function bindActionCreator(actionCreator: Redux.ActionCreator, dispatch: Redux.D
   }
 }
 
+export function bindActionCreators<Action = Redux.ActionCreator>(
+  actionCreators: Action,
+  dispatch: Redux.Dispatch
+): Action
+
+export function bindActionCreators<Action = Redux.ActionCreatorMap>(
+  actionCreators: Action,
+  dispatch: Redux.Dispatch
+): Action
+
 export function bindActionCreators(
   actionCreators: Redux.ActionCreator | Redux.ActionCreatorMap,
   dispatch: Redux.Dispatch
@@ -13,7 +23,6 @@ export function bindActionCreators(
   if (typeof actionCreators === 'function') {
     return bindActionCreator(actionCreators, dispatch)
   }
-
   const bindObj: Redux.ActionCreatorMap = {}
   const keys = Object.keys(actionCreators)
 

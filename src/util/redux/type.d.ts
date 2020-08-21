@@ -3,5 +3,17 @@ export namespace Redux {
     type: string
   }
 
-  type Reducer<State = any, Action> = (state: State | undefined, action: Action) => State
+  type Reducer<State = any> = (state: State | undefined, action: IAction) => State
+  
+  interface ReducerMap {
+    [key: string]: Reducer
+  }
+
+  type ActionCreator<Action = IAction, Param = any[]> = (...args: Param) => Action
+
+  interface ActionCreatorMap {
+    [key: string]: ActionCreator
+  }
+
+  type Dispatch<Action = IAction> = (action: Action) => Action
 }

@@ -2,7 +2,7 @@ import { Redux } from './type'
 import ActionTypes from './actionTypes'
 
 export default function createStore<State, Action extends Redux.IAction>(
-  reducer: Redux.Reducer<State | undefined, Action>,
+  reducer: Redux.Reducer<State | undefined>,
   initState?: State
 ) {
   const currentReducer = reducer

@@ -14,7 +14,7 @@ export function connect(mapProps: MapProps, mapDispatch?: Redux.ActionCreatorMap
       }
       static contextType = ReduxContext
       declare context: React.ContextType<typeof ReduxContext>
-      unSubscribe: Function = () => {}
+      declare unSubscribe: Function
       componentDidMount() {
         this.unSubscribe = this.context!.subscribe(() =>
           this.setState({ count1: this.context!.getState().count1 })

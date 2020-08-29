@@ -4,7 +4,7 @@ export namespace Redux {
   }
 
   type Reducer<State = any> = (state: State | undefined, action: IAction) => State
-  
+
   interface ReducerMap {
     [key: string]: Reducer
   }
@@ -16,4 +16,10 @@ export namespace Redux {
   }
 
   type Dispatch<Action = IAction> = (action: Action) => Action
+
+  interface Store<State = any> {
+    dispatch: Dispatch
+    getState: () => State
+    subscribe: (listener: Function) => () => void
+  }
 }

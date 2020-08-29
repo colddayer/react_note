@@ -1,7 +1,7 @@
 import { bindActionCreators } from '../../util/redux/bindActionCreators'
 import { store } from '.'
 
-const count1 = {
+export const count1 = {
   ADD: () => {
     return { type: 'ADD' }
   },
@@ -10,7 +10,7 @@ const count1 = {
   },
 }
 
-const count2 = {
+export const count2 = {
   ADD: () => {
     return { type: 'ADD1' }
   },

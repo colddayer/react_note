@@ -24,6 +24,7 @@ export function connect(mapProps: MapProps, mapDispatch?: Redux.ActionCreatorMap
         this.unSubscribe()
       }
       render() {
+        console.log(this.context)
         return (
           <WrapComponent
             {...this.state}

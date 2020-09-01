@@ -9,7 +9,7 @@ export namespace Redux {
     [key: string]: Reducer
   }
 
-  type ActionCreator<Action = IAction, Param = any[]> = (...args: Param) => Action
+  type ActionCreator<Action = any, Param = any[]> = (...args: Param) => Action
 
   interface ActionCreatorMap {
     [key: string]: ActionCreator

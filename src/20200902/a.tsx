@@ -11,8 +11,7 @@ export default function A() {
       <span>-----</span>
       <Link to='/a/2'>a 2</Link>
       <Switch>
-        <Route component={() => <div>a1</div>} path='/a/1' />
-        <Route component={() => <div>a2</div>} path='/a/2' />
+        <Route render={(props: any) => <div>a {props.match.params.id}</div>} path='/a/:id' />
         <Redirect to='/a/1' />
       </Switch>
     </div>

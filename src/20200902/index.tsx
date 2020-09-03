@@ -3,15 +3,17 @@ import React from 'react'
 import Home from './home'
 import A from './a'
 import B from './b'
-import HashRouter from '../util/react-router-dom/HashRouter'
+// import HashRouter from '../util/react-router-dom/HashRouter'
 import Route from '../util/react-router-dom/Route'
 import Link from '../util/react-router-dom/Link'
 import Redirect from '../util/react-router-dom/Redirect'
 import Switch from '../util/react-router-dom/Switch'
+import BrowserRouter from '../util/react-router-dom/BrowserRouter'
 
 export const Page: React.FC = () => {
   return (
-    <HashRouter>
+    // <HashRouter>
+    <BrowserRouter>
       <div>
         <Link to='/'>page home</Link>
         <span>------</span>
@@ -26,6 +28,7 @@ export const Page: React.FC = () => {
         <Route path='/error' component={() => <div>404 not found</div>} />
         <Redirect to='/error' />
       </Switch>
-    </HashRouter>
+    </BrowserRouter>
+    // </HashRouter>
   )
 }

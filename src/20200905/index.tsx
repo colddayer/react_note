@@ -4,8 +4,8 @@ import { Home } from './Home'
 import { Counter } from './Counter'
 import { Provider } from 'react-redux'
 import store from './store'
-import { ConnectedRouter } from 'connected-react-router'
 import history from './history'
+import ConnectedRouter from '../util/connected-react-router/ConnectedRouter'
 
 const Page: React.FC = () => {
   return (

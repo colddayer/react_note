@@ -1,7 +1,8 @@
 import { createStore, applyMiddleware } from 'redux'
 import reducer from './reducer/counter'
-import { routerMiddleware, RouterState } from 'connected-react-router'
+import { RouterState } from 'connected-react-router'
 import history from '../history'
+import { routerMiddleware } from '../../util/connected-react-router/routerMiddleware'
 
 const store = createStore(reducer, applyMiddleware(routerMiddleware(history)))
 

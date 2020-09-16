@@ -7,8 +7,9 @@ export const routerMiddleware: (history: History) => Middleware = (history) => (
   dispatch,
 }) => (next) => (action) => {
   if (action.type === CALL_HISTORY_METHOD) {
-    const { method, path } = action.payload
-    history[method](path)
+    const { method, args } = action.payload
+    // @ts-ignore
+    history[method](...args)
   } else {
     next(action)
   }

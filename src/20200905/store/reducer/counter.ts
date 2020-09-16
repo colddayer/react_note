@@ -1,6 +1,6 @@
 import { Reducer, combineReducers } from 'redux'
-import { connectRouter } from 'connected-react-router'
 import history from '../../history'
+import connectRouter from '../../../util/connected-react-router/connectRouter'
 
 const counter: Reducer = (state = { num: 0 }, action) => {
   switch (action.type) {

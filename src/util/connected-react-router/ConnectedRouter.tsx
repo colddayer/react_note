@@ -23,7 +23,7 @@ export default class ConnectedRouter extends Component<{
     })
   }
 
-  componentWillMount() {
+  componentWillUnmount() {
     this.unlisten()
   }
 

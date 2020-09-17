@@ -6,7 +6,8 @@ import ReactDOM from 'react-dom'
 // import Page from './20200831/TestReactRedux'
 // import Page from './20200901/TestReactRedux'
 // import { Page } from './20200902'
-import Page from './20200905'
+// import Page from './20200905'
+import Page from './20200916'
 
 ReactDOM.render(
   <React.StrictMode>

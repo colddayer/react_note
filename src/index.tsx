@@ -8,7 +8,7 @@ import ReactDOM from 'react-dom'
 // import { Page } from './20200902'
 // import Page from './20200905'
 // import Page from './20200916'
-import Page from './20200917'
+import Page from './20200917 & 20200927'
 
 ReactDOM.render(
   <React.StrictMode>
